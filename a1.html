@@ -21,7 +21,7 @@
                     sum += a[j]
                     if(sum == expSum){
                         startInd=i;
-                        lastInd=j;
+                        lastInd=j+1;
                         expResArr.push([startInd, lastInd]);
                         sum = 0;
                     }
@@ -31,7 +31,7 @@
                 return "No elements found"
             }
             else{
-                return 1;
+                return a.slice(expResArr[0][0], expResArr[0][1]);
             }
         }
 
